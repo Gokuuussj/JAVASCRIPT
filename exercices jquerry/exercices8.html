@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Exemple sans la fonction callback jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$("p").hide(1000);
+alert("Le paragraphe est maintenant caché");
+});
+});
+</script>
+<style type="text/css">
+div.panel
+{
+margin:10px;
+margin-left:200px;
+padding:5px;
+text-align:center;
+background:#FFFF00;
+border:solid 1px #c3c3c3;width:400px;
+}
+</style>
+</head>
+<body>
+<button>Cliquez pour voir</button>
+<div class="panel">
+<p>Parce le temps est précieux, nous livrons un
+apprentissage rapide et facile. <br />
+Pas beaucoup de blabla, juste ce qu’il faut pour
+apprendre</br >
+Chez Apprendre-creer-sites.com, vous pouvez étudier tout ce dont
+vous avez besoin d'apprendre, dans un format accessible et
+maniable. </p>
+</div>
+</body>
+</html>

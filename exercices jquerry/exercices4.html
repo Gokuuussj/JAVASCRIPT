@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Exemple de chaînage de méthodes jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+/* Style d'origine */
+p {
+width: 200px;
+padding: 40px 0;
+font: bold 24px sans-serif;
+text-align: center;
+background: #85a1cc;
+border: 1px solid #0a1e97;
+box-sizing: border-box;
+}
+</style>
+<script>
+$(document).ready(function(){
+$(".start").click(function(){/* dans ce code 3 annimations sont enchainées dans la même ligne
+de code */
+$("p").animate({width: "100%"}).animate({fontSize: "46px"}).animate({borderWidth: 30});
+});
+$(".reset").click(function(){
+$("p").removeAttr("style");
+});
+});
+</script>
+</head>
+<body>
+<p>Bonjour tout le monde!</p>
+<button type="button" class="start">Démarer</button>
+<button type="button" class="reset">Effacer</button>
+</body>
+</html>

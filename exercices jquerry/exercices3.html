@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery les évenement et les conflits</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var jq=jQuery.noConflict();
+jq(document).ready(function(){
+jq("#bouton").click(function(){
+jq("P#Introduction").css("color","#FF0000");
+});
+});
+</script>
+</head>
+<body>
+<h2>Changer la couleur du fond</h2>
+<p>Ceci est un paragraphe.</p>
+<p id="Introduction">Un autre paragraphe.</p>
+<p id="Introduction">Un autre paragraphe.</p>
+<button id="bouton">Cliquer ici</button>
+</body>
+</html>

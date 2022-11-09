@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery demo sélecteur</title>
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$("span").css("background-color","#FFFF00")
+})
+})
+</script>
+<style>
+    *{
+    padding: 5px;
+    }
+    </style>
+<script>
+    $(document).ready(function(){
+    /* Mise en évidence des lignes de tableau apparaissant à des places impaires*/
+    $("tr:odd").css("background", "yellow");
+    /* Mettre en évidence les lignes du tableau qui apparaissent à des places paires*/
+    $("tr:even").css("background", "orange");
+    /* Mettre en évidence le premier paragraphe*/
+    $("p:first").css("background", "red");
+    /* Mettre en évidence le dernier élément du paragraphe*/
+    $("p:last").css("background", "green");
+    /* Mettre en évidence tous les éléments de saisie de type texte dans un formulaire*/
+    $("form :text").css("background", "purple");
+    /* Mettre en évidence tous les éléments de saisie avec le type password dans un formulaire*/
+    $("form :password").css("background", "blue");
+    /* Mettre en évidence tous les éléments d'entrée avec le type submit dans un formulaire*/
+    $("form :submit").css("background", "aqua");
+    });
+    </script>
+</head>
+
+<body>
+<h2>Changer la couleur du fond</h2>
+<span>Ceci est un paragraphe.</span>
+<span>Un autre paragraphe.</span>
+<button>Cliquer ici</button>
+
+<table border="1">
+    <thead>
+    <tr>
+    <th>No.</th>
+    <th>Nom</th>
+    <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>1</td>
+    <td>John Carter</td>
+    <td>johncarter@mail.com</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>Peter Parker</td>
+    <td>peterparker@mail.com</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>John Rambo</td>
+    <td>johnrambo@mail.com</td>
+    </tr>
+    </tbody>
+    </table>
+    <p>C'est un paragraphe.</p>
+    <p>C'est un autre paragraphe.</p>
+    <p>C'est un paragraphe de plus.</p>
+    <form>
+ 
+    <label>Nom: <input type="text"></label>
+    <label>Password: <input type="password"></label>
+    <input type="submit" value="Sign In">
+    </form>
+
+</body>
+</html>

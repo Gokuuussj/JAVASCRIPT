@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>jQuery Arrête l'animation en cours et lance l'animation suivante dans la file
+d'attente</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+.box{
+width: 300px;
+height: 200px;
+background: #7edea4;
+margin-top: 20px;
+border: 3px solid #7edea4;
+}
+</style>
+<script>
+$(document).ready(function(){
+// Kill and toggle the current sliding animation
+$(".btn").on("click", function(){
+$(".box").stop().slideToggle(5000);
+});
+});
+</script>
+</head>
+<body>
+<p><strong>Note:</strong> Cliquez sur le bouton "Slide Toggle" pour démarrer
+l'animation, puis cliquez à nouveau avant la fin de l'animation pour comprendre cet
+exemple.</p>
+<button type="button" class="btn">Slide Toggle</button>
+<div class="box"></div>
+</body>
+</html>
